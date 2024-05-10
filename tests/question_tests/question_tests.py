@@ -1,13 +1,11 @@
-#write function tests here, don't add input('') statements here!
 import io
 import unittest
 from unittest.mock import patch
 from src.question_a.question_a import numbers
-#follow this example to add questions b, c, and d for testing including their functions
 
 class Test_Config(unittest.TestCase):
-    @patch('builtins.input', side_effect=['1', '2', '3', '4', '5'])
-    @patch('sys.stdout', new_callable=io.StringIO)
+    @patch('builtins.input', side_effect=['1', '2', '3', '4', '5']) #pass values to the number function without prompting the user.
+    @patch('sys.stdout', new_callable=io.StringIO) # value output
     def test_question_a_numbers(self, mock_stdout, mock_input):
         numbers()
 

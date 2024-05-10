@@ -4,10 +4,10 @@ def display_menu():
 
 display_menu()
 while True:
-    display_value = int(input("Please enter your option: "))
-    if display_value == 1:
+    choose_value = int(input("Please enter your option: "))
+    if choose_value == 1:
         b.stock_purchase_history()
-    elif display_value ==2:
+    elif choose_value ==2:
         exit()
     else:
         print("Please enter a valid choice")
